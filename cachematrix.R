@@ -26,6 +26,11 @@ makeCacheMatrix <- function(x = matrix()) {
 ## "m". If we do, it returns the value of m, else it calculates the inverse
 ## matrix using the function setsolve() and returns it
 
+## BEFORE USING IT REMEMBER YOU NEED TO 
+## i) initialise makeCachematrix using 
+## ii) b <- makeCacheMatrix() and then use b$set() to set a  square matrix 
+## that will be inverted
+
 cacheSolve <- function(x, ...) {
         m <- x$getsolve()
         if(!is.null(m)){
